@@ -1,0 +1,1 @@
+//Page that asks visitors whether they are a coach or a client
