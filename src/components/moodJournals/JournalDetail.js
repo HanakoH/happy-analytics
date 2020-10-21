@@ -1,0 +1,1 @@
+//Full detail of a single Journal Entry
