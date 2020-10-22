@@ -1,17 +1,16 @@
 import React, { useRef } from "react"
-import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { Button, Form, Header, Container } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom"
-import "./Login.css"
 
 
-export const Login = props => {
+export const CoachLogin = props => {
     const email = useRef()
     const existDialog = useRef()
     const history = useHistory()
 
     const existingUserCheck = () => {
-        return fetch(`http://localhost:8088/customers?email=${email.current.value}`)
+        return fetch(`http://localhost:8088/coaches?email=${email.current.value}`)
             .then(res => res.json())
             .then(user => user.length ? user[0] : false)
     }
@@ -22,7 +21,7 @@ export const Login = props => {
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    localStorage.setItem("coach", exists.id)
+                    localStorage.setItem("activeCoach", exists.id)
                     history.push("/")
                 } else {
                     existDialog.current.showModal()
@@ -37,25 +36,29 @@ export const Login = props => {
                 <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
             </dialog>
 
-            <section>
-                <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Nashville Kennels</h1>
-                    <h2>Please sign in</h2>
-                    <fieldset>
+            <Container>
+                <Form className="form--login" onSubmit={handleLogin}>
+                    <Header as='h1'>Coach Portal</Header>
+                    <Header as='h3'>Please sign in</Header>
+                    <Form.Field>
+                        <label>First Name</label>
+                        <input placeholder='First Name' autofocus/>
+                    </Form.Field>
+                    <Form.Field>
                         <label htmlFor="inputEmail"> Email address </label>
                         <input ref={email} type="email"
                             id="email"
                             className="form-control"
                             placeholder="Email address"
-                            required autoFocus />
-                    </fieldset>
-                    <fieldset>
-                        <button type="submit">
+                            required />
+                    </Form.Field>
+                    <Form.Field>
+                        <Button type="submit">
                             Sign in
-                        </button>
-                    </fieldset>
-                </form>
-            </section>
+                        </Button>
+                    </Form.Field>
+                </Form>
+            </Container>
             <section className="link--register">
                 <Link to="/register">Not a member yet?</Link>
             </section>
