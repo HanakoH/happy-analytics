@@ -38,7 +38,7 @@ export const CoachLogin = props => {
 
             <Container>
                 <Form className="form--login" onSubmit={handleLogin}>
-                    <Header as='h1'>Coach Portal</Header>
+                    <Header as='h1'>Coach Portal for Happy Analytics</Header>
                     <Header as='h3'>Please sign in</Header>
                     <Form.Field>
                         <label>First Name</label>

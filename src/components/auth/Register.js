@@ -2,6 +2,7 @@
 import React, { useRef } from "react"
 import { useHistory } from "react-router-dom"
 import { Button, Form, Header } from 'semantic-ui-react'
+import "./Register.css"
 
 export const Register = (props) => {
     const firstName = useRef()
@@ -30,14 +31,15 @@ export const Register = (props) => {
                         },
                         body: JSON.stringify({
                             email: email.current.value,
-                            name: `${firstName.current.value} ${lastName.current.value}`
+                            first_name: firstName.current.value,
+                            last_name: lastName.current.value
                         })
                     })
                         .then(_ => _.json())
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 localStorage.setItem("activeCoach", createdUser.id)
-                                history.push("/")
+                                history.push("/WelcomeCoach")
                             }
                         })
                 }
