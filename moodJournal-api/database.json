@@ -1,116 +1,120 @@
 {
-    "coaches": [
-        {
-            "id": 1,
-            "first_name": "Laura",
-            "last_name": "Wheeler",
-            "email": "lauraTheTherapist@ocd.com"
-        },
-        {
-            "id": 2,
-            "first_name": "Enis",
-            "last_name": "Cirak",
-            "email": "coachEnis@anxiety.com"
-        }
-    ],
-    "client_coach": [
-        {
-            "id": 1,
-            "coachId": 1,
-            "clientId": 1
-        },
-        {
-            "id": 2,
-            "coachId": 1,
-            "clientId": 2
-        },
-        {
-            "id": 3,
-            "coachId": 2,
-            "clientId": 3
-        },
-        {
-            "id": 4,
-            "coachId": 2,
-            "clientId": 4
-        }
-    ],
-    "clients": [
-        {
-            "id": 1,
-            "first_name": "Laura",
-            "last_name": "Palmer",
-            "email": "lauraNeedsHelp@twinpeaks.com"
-        },
-        {
-            "id": 2,
-            "first_name": "Alaska",
-            "last_name": "Young",
-            "email": "lookinForMyself@booksmart.com"
-        },
-        {
-            "id": 3,
-            "first_name": "Brendan",
-            "last_name": "Montgomery",
-            "email": "brendanM20@mba.edu"
-        },
-        {
-            "id": 4,
-            "first_name": "Josephine",
-            "last_name": "Viotto",
-            "email": "justYourAverageJo@gmail.com"
-        }
-    ],
-    "testResults": [
-        {
-            "id": 1,
-            "clientId": 1,
-            "date": 1519211809934,
-            "depression_test": 4,
-            "anxiety_test": 4,
-            "anger_test": 4,
-            "satisfaction_test": 4,
-            "temptations_test": 4,
-            "happiness_test": 4,
-            "willingness_test": 4
-        },
-        {
-            "id": 2,
-            "clientId": 1,
-            "date": 1519211810362,
-            "depression_test": 2,
-            "anxiety_test": 0,
-            "anger_test": 1,
-            "satisfaction_test": 28,
-            "temptations_test": 5,
-            "happiness_test": 15,
-            "willingness_test": 10
-        },
-        {
-            "id": 3,
-            "clientId": 1,
-            "date": 1519211811670,
-            "depression_test": 1,
-            "anxiety_test": 0,
-            "anger_test": 0,
-            "satisfaction_test": 29,
-            "temptations_test": 2,
-            "happiness_test": 20,
-            "willingness_test": 17
-        },
-        {
-            "id": 4,
-            "clientId": 2,
-            "date": 1519211811678,
-            "depression_test": 2,
-            "anxiety_test": 0,
-            "anger_test": 1,
-            "satisfaction_test": 28,
-            "temptations_test": 5,
-            "happiness_test": 20,
-            "willingness_test": 10
-        }
-    ]
- }
- 
- 
+  "coaches": [
+    {
+      "email": "lauraTheTherapist@ocd.com",
+      "first_name": "Laura",
+      "last_name": "Wheeler",
+      "id": 1
+    },
+    {
+      "email": "coachEnis@anxiety.com",
+      "first_name": "Enis",
+      "last_name": "Cirak",
+      "id": 2
+    },
+    {
+      "email": "Hanako@gmail.com",
+      "first_name": "Hanako",
+      "last_name": "Hashiguchi",
+      "id": 3
+    }
+  ],
+  "client_coach": [
+    {
+      "id": 1,
+      "coachId": 1,
+      "clientId": 1
+    },
+    {
+      "id": 2,
+      "coachId": 1,
+      "clientId": 2
+    },
+    {
+      "id": 3,
+      "coachId": 2,
+      "clientId": 3
+    },
+    {
+      "id": 4,
+      "coachId": 2,
+      "clientId": 4
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "first_name": "Laura",
+      "last_name": "Palmer",
+      "email": "lauraNeedsHelp@twinpeaks.com"
+    },
+    {
+      "id": 2,
+      "first_name": "Alaska",
+      "last_name": "Young",
+      "email": "lookinForMyself@booksmart.com"
+    },
+    {
+      "id": 3,
+      "first_name": "Brendan",
+      "last_name": "Montgomery",
+      "email": "brendanM20@mba.edu"
+    },
+    {
+      "id": 4,
+      "first_name": "Josephine",
+      "last_name": "Viotto",
+      "email": "justYourAverageJo@gmail.com"
+    }
+  ],
+  "testResults": [
+    {
+      "id": 1,
+      "clientId": 1,
+      "date": 1519211809934,
+      "depression_test": 4,
+      "anxiety_test": 4,
+      "anger_test": 4,
+      "satisfaction_test": 4,
+      "temptations_test": 4,
+      "happiness_test": 4,
+      "willingness_test": 4
+    },
+    {
+      "id": 2,
+      "clientId": 1,
+      "date": 1519211810362,
+      "depression_test": 2,
+      "anxiety_test": 0,
+      "anger_test": 1,
+      "satisfaction_test": 28,
+      "temptations_test": 5,
+      "happiness_test": 15,
+      "willingness_test": 10
+    },
+    {
+      "id": 3,
+      "clientId": 1,
+      "date": 1519211811670,
+      "depression_test": 1,
+      "anxiety_test": 0,
+      "anger_test": 0,
+      "satisfaction_test": 29,
+      "temptations_test": 2,
+      "happiness_test": 20,
+      "willingness_test": 17
+    },
+    {
+      "id": 4,
+      "clientId": 2,
+      "date": 1519211811678,
+      "depression_test": 2,
+      "anxiety_test": 0,
+      "anger_test": 1,
+      "satisfaction_test": 28,
+      "temptations_test": 5,
+      "happiness_test": 20,
+      "willingness_test": 10
+    }
+  ]
+}
