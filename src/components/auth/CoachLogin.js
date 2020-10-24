@@ -22,6 +22,7 @@ export const CoachLogin = props => {
             .then(exists => {
                 if (exists) {
                     localStorage.setItem("activeCoach", exists.id)
+                    console.log("trying to redirect to coach page")
                     history.push("/coach")
                 } else {
                     existDialog.current.showModal()
@@ -42,7 +43,7 @@ export const CoachLogin = props => {
                     <Header as='h3'>Please sign in</Header>
                     <Form.Field>
                         <label>First Name</label>
-                        <input placeholder='First Name' autofocus/>
+                        <input placeholder='First Name' autoFocus/>
                     </Form.Field>
                     <Form.Field>
                         <label htmlFor="inputEmail"> Email address </label>

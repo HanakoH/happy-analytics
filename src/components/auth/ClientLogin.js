@@ -42,7 +42,7 @@ export const ClientLogin = props => {
                     <Header as='h3'>Please sign in</Header>
                     <Form.Field>
                         <label>First Name</label>
-                        <input placeholder='First Name' autofocus/>
+                        <input placeholder='First Name' autoFocus/>
                     </Form.Field>
                     <Form.Field>
                         <label htmlFor="inputEmail"> Email address </label>
