@@ -22,7 +22,7 @@ export const CoachLogin = props => {
             .then(exists => {
                 if (exists) {
                     localStorage.setItem("activeCoach", exists.id)
-                    history.push("/")
+                    history.push("/coach")
                 } else {
                     existDialog.current.showModal()
                 }
