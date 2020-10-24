@@ -1,0 +1,13 @@
+.headLogo {
+    min-height: 5rem;
+    min-width: 10rem;
+}
+
+main {
+    text-align: center;
+}
+
+.choiceOfLogin {
+    display: flex;
+    justify-content: space-around;
+}

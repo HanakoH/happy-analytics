@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-// import { AppViews } from "./AppViews";
-// import { NavBar } from "./nav/NavBar";
+import { ClientLogin } from "./auth/ClientLogin";
+import { SplashPage } from "./auth/SplashPage";
 import { CoachLogin } from "./auth/CoachLogin";
 import { Register } from "./auth/Register";
 import "./HappyAnalytics.css"
@@ -17,16 +17,28 @@ export const HappyAnalytics = () => (
               {/* <AppViews /> */}
             </>
           );
+        } else if (localStorage.getItem("activeClient")) {
+          return (
+            <>
+              {/* <NavBar /> */}
+              {/* <AppViews /> */}
+            </>
+          );
         } else {
-          return <Redirect to="/coach.login" />;
+          return <Redirect to="/" />;
         }
       }}
     />
-
-    <Route path="/coach.login">
+    <Route exact path="/">
+      <SplashPage />
+    </Route>
+    <Route exact path="/client.login">
+      <ClientLogin />
+    </Route>
+    <Route exact path="/coach.login">
       <CoachLogin />
     </Route>
-    <Route path="/register">
+    <Route exact path="/register">
       <Register />
     </Route>
   </>
