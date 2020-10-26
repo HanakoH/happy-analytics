@@ -11,6 +11,12 @@
       "first_name": "Enis",
       "last_name": "Cirak",
       "id": 2
+    },
+    {
+      "email": "hanky@gmail.com",
+      "first_name": "Hank",
+      "last_name": "Hanko",
+      "id": 3
     }
   ],
   "client_coach": [
@@ -59,6 +65,12 @@
       "first_name": "Josephine",
       "last_name": "Viotto",
       "email": "justYourAverageJo@gmail.com"
+    },
+    {
+      "email": "Hanako.E.Hashiguchi@gmail.com",
+      "first_name": "Hanako",
+      "last_name": "Hashiguchi",
+      "id": 5
     }
   ],
   "testResults": [

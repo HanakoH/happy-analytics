@@ -1,7 +1,7 @@
 //Initial page for new coaches to create their first client user
 import React, { useRef } from "react";
 import { Header, Image, Button, Form } from "semantic-ui-react"
-import { Link, useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import mainLogo from "./images/happy_analytics_200x200.png";
 
 export const WelcomeCoach = () => {
