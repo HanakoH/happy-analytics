@@ -22,7 +22,7 @@ export const CoachLogin = props => {
             .then(exists => {
                 if (exists) {
                     localStorage.setItem("activeCoach", exists.id)
-                    console.log("trying to redirect to coach page")
+                    localStorage.setItem("coachName", exists.first_name)
                     history.push("/coach")
                 } else {
                     existDialog.current.showModal()
