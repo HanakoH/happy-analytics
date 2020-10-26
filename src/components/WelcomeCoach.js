@@ -1,10 +1,13 @@
-//Register only available to Coaches
-import React, { useRef } from "react"
-import { useHistory } from "react-router-dom"
-import { Button, Form, Header } from 'semantic-ui-react'
-import "./Register.css"
+//Initial page for new coaches to create their first client user
+import React, { useRef } from "react";
+import { Header, Image, Button, Form } from "semantic-ui-react"
+import { Link, useHistory } from "react-router-dom"
+import mainLogo from "./images/happy_analytics_200x200.png";
 
-export const Register = (props) => {
+export const WelcomeCoach = () => {
+
+    const coachName = localStorage.getItem("coachName")
+
     const firstName = useRef()
     const lastName = useRef()
     const email = useRef()
@@ -24,7 +27,7 @@ export const Register = (props) => {
         existingUserCheck()
             .then((userExists) => {
                 if (!userExists) {
-                    fetch("http://localhost:8088/coaches", {
+                    fetch("http://localhost:8088/clients", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
@@ -36,15 +39,8 @@ export const Register = (props) => {
                         })
                     })
                         .then(_ => _.json())
-                        .then(createdUser => {
-                            if (createdUser.hasOwnProperty("id")) {
-                                localStorage.setItem("activeCoach", createdUser.id)
-                                localStorage.setItem("coachName", createdUser.first_name)
-                                history.push("/WelcomeCoach")
-                            }
-                        })
-                }
-                else {
+                        .then(history.push("/coach"))
+                } else {
                     conflictDialog.current.showModal()
                 }
             })
@@ -58,9 +54,12 @@ export const Register = (props) => {
                 <div>Account with that email address already exists</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
             </dialog>
-
+            <Header as="h1">
+                <Image src={mainLogo} className="headLogo" />
+                Welcome {coachName}
+            </Header>
             <Form  widths='equal' className="form--login" onSubmit={handleRegister}>
-                <Header as='h1' className="h3 mb-3 font-weight-normal">Please Register for Happy Analytics</Header>
+                <Header as='h2' className="h2 mb-3 font-weight-normal">To add your first client add their first and last name and their email.</Header>
                 <Form.Field>
                     <label htmlFor="firstName"> First Name </label>
                     <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First name" required autoFocus />

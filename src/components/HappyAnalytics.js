@@ -1,9 +1,10 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-import { ClientLogin } from "./auth/ClientLogin";
 import { SplashPage } from "./auth/SplashPage";
+import { ClientLogin } from "./auth/ClientLogin";
 import { CoachLogin } from "./auth/CoachLogin";
 import { Register } from "./auth/Register";
+import { WelcomeCoach } from "./WelcomeCoach";
 import "./HappyAnalytics.css"
 
 export const HappyAnalytics = () => (
@@ -40,6 +41,9 @@ export const HappyAnalytics = () => (
     </Route>
     <Route exact path="/register">
       <Register />
+    </Route>
+    <Route exact path="/WelcomeCoach">
+      <WelcomeCoach />
     </Route>
   </>
 );
