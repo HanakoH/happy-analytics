@@ -7,6 +7,7 @@ import { Register } from "./auth/Register";
 import { WelcomeCoach } from "./WelcomeCoach";
 import "./HappyAnalytics.css"
 import { DepressionTest } from "./tests/testChoice/1Depression/DepressionTest";
+import { DepressionResults } from "./tests/testChoice/1Depression/DepressionResult";
 
 export const HappyAnalytics = () => (
   <>
@@ -34,6 +35,9 @@ export const HappyAnalytics = () => (
     <Route exact path="/coach">
       <DepressionTest />
     </Route>
+    <Route path="/DepressionResult">
+      <DepressionResults />
+    </Route>  
     <Route exact path="/">
       <SplashPage />
     </Route>

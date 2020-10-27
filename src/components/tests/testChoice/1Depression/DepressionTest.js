@@ -1,4 +1,4 @@
-//Hosts all choices of questions and potential answers for the Depression Test
+//Hosts all choices of questions and potential answers for the Depression Test and sends the answers to be stored in Session Storage
 import React, { useState } from 'react'
 import { useHistory } from "react-router-dom"
 import { Form, Header, Select, Container, Button } from 'semantic-ui-react'
