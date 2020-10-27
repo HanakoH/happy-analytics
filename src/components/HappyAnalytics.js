@@ -5,10 +5,11 @@ import { ClientLogin } from "./auth/ClientLogin";
 import { CoachLogin } from "./auth/CoachLogin";
 import { Register } from "./auth/Register";
 import { WelcomeCoach } from "./WelcomeCoach";
-import "./HappyAnalytics.css"
 import { DepressionTest } from "./tests/testChoice/1Depression/DepressionTest";
-import { DepressionResults } from "./tests/testChoice/1Depression/DepressionResult";
+import { DepressionResult } from "./tests/testChoice/1Depression/DepressionResult";
 import { AnxietyTest } from "./tests/testChoice/2Anxiety/AnxietyTest";
+import { AnxietyResult } from "./tests/testChoice/2Anxiety/AnxietyResult";
+import "./HappyAnalytics.css"
 
 export const HappyAnalytics = () => (
   <>
@@ -37,10 +38,13 @@ export const HappyAnalytics = () => (
       <DepressionTest />
     </Route>
     <Route path="/DepressionResult">
-      <DepressionResults />
+      <DepressionResult />
     </Route>
-    <Route path="/AnxietyTest">
+    <Route exact path="/AnxietyTest">
       <AnxietyTest />
+    </Route>
+    <Route path="/AnxietyResult">
+      <AnxietyResult />
     </Route>  
     <Route exact path="/">
       <SplashPage />
