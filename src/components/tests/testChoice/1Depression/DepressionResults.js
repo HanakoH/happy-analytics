@@ -1,1 +1,0 @@
-//Calculates DepressionResults and sends it to be stored in Session Storage
