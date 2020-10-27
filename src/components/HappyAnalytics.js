@@ -8,6 +8,7 @@ import { WelcomeCoach } from "./WelcomeCoach";
 import "./HappyAnalytics.css"
 import { DepressionTest } from "./tests/testChoice/1Depression/DepressionTest";
 import { DepressionResults } from "./tests/testChoice/1Depression/DepressionResult";
+import { AnxietyTest } from "./tests/testChoice/2Anxiety/AnxietyTest";
 
 export const HappyAnalytics = () => (
   <>
@@ -37,6 +38,9 @@ export const HappyAnalytics = () => (
     </Route>
     <Route path="/DepressionResult">
       <DepressionResults />
+    </Route>
+    <Route path="/AnxietyTest">
+      <AnxietyTest />
     </Route>  
     <Route exact path="/">
       <SplashPage />

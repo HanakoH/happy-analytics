@@ -1,5 +1,5 @@
 //Hosts all choices of questions and potential answers for the Depression Test and sends the answers to be stored in Session Storage
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useHistory } from "react-router-dom"
 import { Form, Header, Select, Container, Button } from 'semantic-ui-react'
 
@@ -12,11 +12,12 @@ const depressionChoices = [
   ]
 
 export const DepressionTest = props => {
-    const [firstQuestion, setFirstQuestion] = useState()
-    const [secondQuestion, setSecondQuestion] = useState()
-    const [thirdQuestion, setThirdQuestion] = useState()
-    const [fourthQuestion, setFourthQuestion] = useState()
-    const [fifthQuestion, setFifthQuestion] = useState()
+    const conflictDialog = useRef()
+    const [firstQuestion, setFirstQuestion] = useState("")
+    const [secondQuestion, setSecondQuestion] = useState("")
+    const [thirdQuestion, setThirdQuestion] = useState("")
+    const [fourthQuestion, setFourthQuestion] = useState("")
+    const [fifthQuestion, setFifthQuestion] = useState("")
     const history = useHistory()
 
     const handleDropdownOne = (e, data) => {
@@ -41,13 +42,22 @@ export const DepressionTest = props => {
 
     const saveTestResults = (e) => {
         e.preventDefault()
-        const DepressionTest = firstQuestion + secondQuestion + thirdQuestion + fourthQuestion + fifthQuestion
-        sessionStorage.setItem("DepressionTest", DepressionTest)
-        history.push("/DepressionResult")
+        if (firstQuestion !== "" && secondQuestion !== "" && thirdQuestion !== "" && fourthQuestion !== "" && fifthQuestion !== "") {
+            const DepressionTest = firstQuestion + secondQuestion + thirdQuestion + fourthQuestion + fifthQuestion
+            sessionStorage.setItem("DepressionTest", DepressionTest)
+            history.push("/DepressionResult")
+        } else {
+            conflictDialog.current.showModal()
+        }
     }
 
     return (
     <>
+        <dialog className="dialog dialog--password" ref={conflictDialog}>
+                <div>You must choose an option for each question.</div>
+                <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
+        </dialog>
+
         <Form widths='equal' className="tests" onSubmit={saveTestResults}>
             <Header as='h2'>Depression Test</Header>
             <Container textAlign='center'>
