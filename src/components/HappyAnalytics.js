@@ -6,6 +6,7 @@ import { CoachLogin } from "./auth/CoachLogin";
 import { Register } from "./auth/Register";
 import { WelcomeCoach } from "./WelcomeCoach";
 import "./HappyAnalytics.css"
+import { DepressionTest } from "./tests/testChoice/1Depression/DepressionTest";
 
 export const HappyAnalytics = () => (
   <>
@@ -14,7 +15,7 @@ export const HappyAnalytics = () => (
         if (localStorage.getItem("activeCoach")) {
           return (
             <>
-              {/* <NavBar /> */}
+              {/* <DepressionTest /> */}
               {/* <AppViews /> */}
             </>
           );
@@ -30,6 +31,9 @@ export const HappyAnalytics = () => (
         }
       }}
     />
+    <Route exact path="/coach">
+      <DepressionTest />
+    </Route>
     <Route exact path="/">
       <SplashPage />
     </Route>

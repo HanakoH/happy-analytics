@@ -15,7 +15,7 @@ export const WelcomeCoach = () => {
     const history = useHistory()
 
     const existingUserCheck = () => {
-        return fetch(`http://localhost:8088/coaches?email=${email.current.value}`)
+        return fetch(`http://localhost:8088/clients?email=${email.current.value}`)
             .then(res => res.json())
             .then(user => !!user.length)
     }
@@ -39,6 +39,19 @@ export const WelcomeCoach = () => {
                         })
                     })
                         .then(_ => _.json())
+                        .then(obj => {
+                            const firstClientId = obj.id
+                            const currentCoach = localStorage.getItem("activeCoach")
+                            fetch("http://localhost:8088/client_coach", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                coachId: +currentCoach,
+                                clientId: firstClientId
+                        })
+                    })})
                         .then(history.push("/coach"))
                 } else {
                     conflictDialog.current.showModal()
