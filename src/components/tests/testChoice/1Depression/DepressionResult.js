@@ -1,6 +1,7 @@
 //Calculates DepressionResults 
 import React from 'react'
-import { Container, Header } from 'semantic-ui-react'
+import { Link } from "react-router-dom"
+import { Container, Header, Button } from 'semantic-ui-react'
 
 const DisplayCorrectResult = ({depressionResult}) => {
     console.log(depressionResult)
@@ -57,6 +58,9 @@ export const DepressionResults = () => {
     return (
         <>
             <DisplayCorrectResult key='1' depressionResult={depressionResult}/>
+            <Button>
+                <Link to="/AnxietyTest">Continue to Anxiety Test</Link> 
+            </Button>
         </>
     )
 }
