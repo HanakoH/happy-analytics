@@ -13,32 +13,37 @@
       "id": 2
     },
     {
-      "email": "hanky@gmail.com",
-      "first_name": "Hank",
-      "last_name": "Hanko",
+      "email": "coachJim@innersolutions.com",
+      "first_name": "Jim",
+      "last_name": "Sippolini",
       "id": 3
     }
   ],
   "client_coach": [
     {
-      "id": 1,
       "coachId": 1,
-      "clientId": 1
+      "clientId": 1,
+      "id": 1
     },
     {
-      "id": 2,
       "coachId": 1,
-      "clientId": 2
+      "clientId": 2,
+      "id": 2
     },
     {
-      "id": 3,
       "coachId": 2,
-      "clientId": 3
+      "clientId": 3,
+      "id": 3
     },
     {
-      "id": 4,
       "coachId": 2,
-      "clientId": 4
+      "clientId": 4,
+      "id": 4
+    },
+    {
+      "coachId": 3,
+      "clientId": 5,
+      "id": 5
     }
   ],
   "clients": [
@@ -67,8 +72,8 @@
       "email": "justYourAverageJo@gmail.com"
     },
     {
-      "email": "Hanako.E.Hashiguchi@gmail.com",
-      "first_name": "Hanako",
+      "email": "guccigucci@gmail.com",
+      "first_name": "Vivi",
       "last_name": "Hashiguchi",
       "id": 5
     }

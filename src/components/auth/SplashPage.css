@@ -10,4 +10,5 @@ main {
 .choiceOfLogin {
     display: flex;
     justify-content: space-around;
+    font-size: 1.4em;
 }

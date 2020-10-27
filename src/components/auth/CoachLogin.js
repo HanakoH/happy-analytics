@@ -1,8 +1,6 @@
 import React, { useRef } from "react"
 import { Button, Form, Header, Container } from 'semantic-ui-react'
-import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom"
-
+import { Link, useHistory } from "react-router-dom";
 
 export const CoachLogin = props => {
     const email = useRef()
