@@ -15,14 +15,14 @@ const DisplayCorrectResult = ({anxietyResult}) => {
         return <Container>
             <Header as="h2">Anxiety Result: Borderline</Header>
             <p>
-                Your Score is {anxietyResult}. These scores are normal, but you could use a little tune-up.
+                Your Score is {anxietyResult}. This score is normal, but you could use a little tune-up.
             </p>
         </Container> 
     } else if (anxietyResult === 3 || anxietyResult === 4 || anxietyResult === 5) {
         return <Container>
             <Header as="h2">Anxiety Result: Mild</Header>
             <p>
-                Your Score is {anxietyResult}. Although your scores are not greatly elevated, this is enough anxiety to take the joy out of life.
+                Your Score is {anxietyResult}. Although your score is not greatly elevated, this is enough anxiety to take the joy out of life.
             </p>
         </Container> 
     } else if (anxietyResult >= 6 && anxietyResult <= 10) {
