@@ -13,6 +13,7 @@ import "./HappyAnalytics.css"
 import { AngerTest } from "./tests/testChoice/3Anger/AngerTest";
 import { AngerResult } from "./tests/testChoice/3Anger/AngerResult";
 import { SatisfactionTest } from "./tests/testChoice/4Satisfaction/SatisfactionTest";
+import { SatisfactionResult } from "./tests/testChoice/4Satisfaction/SatisfactionResult";
 
 export const HappyAnalytics = () => (
   <>
@@ -58,6 +59,10 @@ export const HappyAnalytics = () => (
     <Route exact path="/SatisfactionTest">
       <SatisfactionTest />
     </Route>
+    <Route exact path="/SatisfactionResult">
+      <SatisfactionResult />
+    </Route>
+
     <Route exact path="/">
       <SplashPage />
     </Route>
