@@ -5,21 +5,22 @@ import { ClientLogin } from "./auth/ClientLogin";
 import { CoachLogin } from "./auth/CoachLogin";
 import { Register } from "./auth/Register";
 import { WelcomeCoach } from "./WelcomeCoach";
-import { DepressionTest } from "./tests/testChoice/1Depression/DepressionTest";
-import { DepressionResult } from "./tests/testChoice/1Depression/DepressionResult";
-import { AnxietyTest } from "./tests/testChoice/2Anxiety/AnxietyTest";
-import { AnxietyResult } from "./tests/testChoice/2Anxiety/AnxietyResult";
+import { DepressionTest } from "./tests/1Depression/DepressionTest";
+import { DepressionResult } from "./tests/1Depression/DepressionResult";
+import { AnxietyTest } from "./tests/2Anxiety/AnxietyTest";
+import { AnxietyResult } from "./tests/2Anxiety/AnxietyResult";
 import "./HappyAnalytics.css"
-import { AngerTest } from "./tests/testChoice/3Anger/AngerTest";
-import { AngerResult } from "./tests/testChoice/3Anger/AngerResult";
-import { SatisfactionTest } from "./tests/testChoice/4Satisfaction/SatisfactionTest";
-import { SatisfactionResult } from "./tests/testChoice/4Satisfaction/SatisfactionResult";
-import { TemptationsTest } from "./tests/testChoice/5Temptations/TemptationsTest";
-import { TemptationsResult } from "./tests/testChoice/5Temptations/TemptationsResults";
-import { HappinessTest } from "./tests/testChoice/6Happiness/HappinessTest";
-import { HappinessResult } from "./tests/testChoice/6Happiness/HappinessResults";
-import { WillingnessTest } from "./tests/testChoice/7Willingness/WillingnessTest";
-import { WillingnessResult } from "./tests/testChoice/7Willingness/WillingnessResults";
+import { AngerTest } from "./tests/3Anger/AngerTest";
+import { AngerResult } from "./tests/3Anger/AngerResult";
+import { SatisfactionTest } from "./tests/4Satisfaction/SatisfactionTest";
+import { SatisfactionResult } from "./tests/4Satisfaction/SatisfactionResult";
+import { TemptationsTest } from "./tests/5Temptations/TemptationsTest";
+import { TemptationsResult } from "./tests/5Temptations/TemptationsResults";
+import { HappinessTest } from "./tests/6Happiness/HappinessTest";
+import { HappinessResult } from "./tests/6Happiness/HappinessResults";
+import { WillingnessTest } from "./tests/7Willingness/WillingnessTest";
+import { WillingnessResult } from "./tests/7Willingness/WillingnessResults";
+import { ClientNavBar } from "./clients/ClientNavBar";
 
 export const HappyAnalytics = () => (
   <>
@@ -35,8 +36,9 @@ export const HappyAnalytics = () => (
         } else if (localStorage.getItem("activeClient")) {
           return (
             <>
-              {/* <NavBar /> */}
-              {/* <AppViews /> */}
+              <Route exact path="/Client">
+                <ClientNavBar />
+              </Route>
             </>
           );
         } else {
@@ -44,7 +46,7 @@ export const HappyAnalytics = () => (
         }
       }}
     />
-    <Route exact path="/coach">
+    <Route exact path="/DepressionTest">
       <DepressionTest />
     </Route>
     <Route exact path="/DepressionResult">

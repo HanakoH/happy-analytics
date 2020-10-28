@@ -1,1 +1,0 @@
-//Pulls results from each test from Session Storage and sends a full testObj to database.json
