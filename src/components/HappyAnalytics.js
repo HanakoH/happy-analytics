@@ -15,6 +15,7 @@ import { AngerResult } from "./tests/testChoice/3Anger/AngerResult";
 import { SatisfactionTest } from "./tests/testChoice/4Satisfaction/SatisfactionTest";
 import { SatisfactionResult } from "./tests/testChoice/4Satisfaction/SatisfactionResult";
 import { TemptationsTest } from "./tests/testChoice/5Temptations/TemptationsTest";
+import { TemptationsResult } from "./tests/testChoice/5Temptations/TemptationsResults";
 
 export const HappyAnalytics = () => (
   <>
@@ -65,6 +66,9 @@ export const HappyAnalytics = () => (
     </Route>
     <Route exact path="/TemptationsTest">
       <TemptationsTest />
+    </Route>
+    <Route exact path="/TemptationsResult">
+      <TemptationsResult />
     </Route>
 
     <Route exact path="/">
