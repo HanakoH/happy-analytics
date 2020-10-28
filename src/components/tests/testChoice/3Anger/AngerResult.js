@@ -53,7 +53,7 @@ export const AngerResult = () => {
     const angerResult = +sessionStorage.getItem("AngerTest")
     return (
         <>
-            <DisplayCorrectResult key='2' angerResult={angerResult}/>
+            <DisplayCorrectResult key='3' angerResult={angerResult}/>
             <Button>
                 <Link to="/SatisfactionTest">Continue to Relationship Satisfaction Test</Link> 
             </Button>
