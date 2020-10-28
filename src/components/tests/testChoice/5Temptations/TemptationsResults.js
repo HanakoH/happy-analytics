@@ -53,7 +53,7 @@ export const TemptationsResult = () => {
     const temptationsResult = +sessionStorage.getItem("TemptationsTest")
     return (
         <>
-            <DisplayCorrectResult key='3' temptationsResult={temptationsResult}/><br></br>
+            <DisplayCorrectResult key='5' temptationsResult={temptationsResult}/><br></br>
             <Container>
                 <p>
                     There are just a couple more tests for you to take. So far, we've been talking about negatives--gloomy moods, trouble relationships, and bad habits.
