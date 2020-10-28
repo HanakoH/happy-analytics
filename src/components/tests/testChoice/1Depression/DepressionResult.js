@@ -6,45 +6,45 @@ import { Container, Header, Button } from 'semantic-ui-react'
 const DisplayCorrectResult = ({depressionResult}) => {
     if (depressionResult === 0 ) {
         return <Container>
-            <Header as="h2">No Symptoms</Header>
+            <Header as="h2">Depression Result: No Symptoms</Header>
             <p>
-                That's terrific! You don't seem to have any symptoms at all.
+                Your Score is {depressionResult}. That's terrific! You don't seem to have any symptoms at all.
             </p>
         </Container> 
     } else if (depressionResult === 1 || depressionResult === 2) {
         return <Container>
-            <Header as="h2">Borderline</Header>
+            <Header as="h2">Depression Result: Borderline</Header>
             <p>
-                These scores are normal, but you could use a little tune-up.
+                Your Score is {depressionResult}. This score is normal, but you could use a little tune-up.
             </p>
         </Container> 
     } else if (depressionResult === 3 || depressionResult === 4 || depressionResult === 5) {
         return <Container>
-            <Header as="h2">Mild</Header>
+            <Header as="h2">Depression Result: Mild</Header>
             <p>
-                Although your scores are not greatly elevated, this is enough depression to take the joy out of life.
+                Your Score is {depressionResult}. Although your score is not greatly elevated, this is enough depression to take the joy out of life.
             </p>
         </Container> 
     } else if (depressionResult >= 6 && depressionResult <= 10) {
         return <Container>
-            <Header as="h2">Moderate</Header>
+            <Header as="h2">Depression Result: Moderate</Header>
             <p>
-                You're feeling quite a bit of depression. Although you're not in the severe range, this score reflects considerable unhappiness.
+                Your Score is {depressionResult}. You're feeling quite a bit of depression. Although you're not in the severe range, this score reflects considerable unhappiness.
             </p>
         </Container> 
     } else if (depressionResult >= 11 && depressionResult <= 15) {
         return <Container>
-            <Header as="h2">Severe</Header>
+            <Header as="h2">Depression Result: Severe</Header>
             <p>
-                You have fairly strong feelings of depression. That makes me sad, but there is some really good news.
+                Your Score is {depressionResult}. You have fairly strong feelings of depression. That makes me sad, but there is some really good news.
                  The tools and exercises your coach will give you can help transform your negative feelings into joy.
             </p>
         </Container> 
     } else {
         return <Container>
-            <Header as="h2">Extreme</Header>
+            <Header as="h2">Depression Result: Extreme</Header>
             <p>
-                Scores in this range indicate that your suffering is intense. Friends or family may have trouble grasping how much pain you're in.
+                Your Score is {depressionResult}. Scores in this range indicate that your suffering is intense. Friends or family may have trouble grasping how much pain you're in.
                  The good news is that the prognosis for improvement is very positive. In fact, recovery is one of the greatest feelings a human being can have.
             </p>
         </Container> 
