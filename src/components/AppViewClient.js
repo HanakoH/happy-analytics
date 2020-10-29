@@ -1,4 +1,4 @@
-//Where everything that needs to be viewed is called
+//Where everything that needs to be viewed for Clients is called
 import React from 'react'
 import { Route } from "react-router-dom";
 //Home

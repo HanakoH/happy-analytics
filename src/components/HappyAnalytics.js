@@ -11,6 +11,8 @@ import "./HappyAnalytics.css"
 
 import { ClientNavBar } from "./ClientNavBar";
 import { AppViewClient } from "./AppViewClient";
+import { CoachNavBar } from "./CoachNavBar";
+import { AppViewCoach } from "./AppViewCoach";
 
 
 
@@ -21,8 +23,8 @@ export const HappyAnalytics = () => (
         if (localStorage.getItem("activeCoach")) {
           return (
             <>
-              {/* <DepressionTest /> */}
-              {/* <AppViews /> */}
+                <CoachNavBar />
+                <AppViewCoach />
             </>
           );
         } else if (localStorage.getItem("activeClient")) {
