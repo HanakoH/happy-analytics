@@ -66,7 +66,7 @@ const DisplayCorrectResult = ({willingnessResult}) => {
         return <Container>
             <Header as="h2">Willingness Result: Totally Willing</Header>
             <p>
-                Your Score is {willingnessResult}! This is fabulous!
+                Your Score is {willingnessResult}! This is fabulous! Wow! Kudos!
             </p>
             <br></br>
             <p>
