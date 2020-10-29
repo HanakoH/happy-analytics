@@ -5,7 +5,7 @@ import { Route } from "react-router-dom";
 import { CoachHome } from './coaches/CoachHome';
 import { ClientList } from './clients/ClientList';
 import { ClientProvider } from './clients/ClientProvider';
-import { ClientDetail } from './coaches/ClientDetailForCoach'
+import { ClientDetailForCoach } from './coaches/ClientDetailForCoach'
 //ClientForm & Success Page
 import { ClientForm } from './coaches/ClientForm';
 import { SuccessfullyAdded } from './coaches/SuccessfullyAdded';
@@ -22,7 +22,7 @@ export const AppViewCoach = () => {
             
         <ClientProvider>
             <Route exact path="/Clients/:clientId(\d+)">
-                <ClientDetail />
+                <ClientDetailForCoach />
             </Route>
         </ClientProvider>  
 

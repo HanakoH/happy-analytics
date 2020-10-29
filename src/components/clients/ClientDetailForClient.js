@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react"
 import { ClientContext } from "../clients/ClientProvider"
 import { useParams, useHistory } from "react-router-dom"
-import { Card } from "semantic-ui-react"
-import { ClientDetailCard } from "./ClientDetailCard"
+import { Card, Container } from "semantic-ui-react"
+import { ClientDetailCard } from "../coaches/ClientDetailCard"
 
-export const ClientDetailForCoach = () => {
-	const { getClientById, deleteClient } = useContext(ClientContext)
+export const ClientDetailForClient = () => {
+	const { getClientById } = useContext(ClientContext)
 	
 	const [client, setClient] = useState({})
 	
@@ -21,6 +21,7 @@ export const ClientDetailForCoach = () => {
 
 
     return (
+        <Container style={{ marginTop: '7em' }}>
         <section className="client">
             <h3 className="client__name">{client.first_name} {client.last_name}</h3>
 			<Card className="client__journals">
@@ -30,15 +31,8 @@ export const ClientDetailForCoach = () => {
 					})
 				}
 			</Card>
-			<button onClick={
-				() => {
-					deleteClient(client.id)
-						.then(() => {
-							history.push("/Coach")
-						})
-				}}>Delete Client
-			</button>
             
         </section>
+        </Container>
     )
 }

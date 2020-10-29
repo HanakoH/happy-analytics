@@ -23,7 +23,7 @@ export const ClientLogin = props => {
                 if (exists) {
                     localStorage.setItem("activeClient", exists.id)
                     localStorage.setItem("clientName", exists.first_name)
-                    history.push("/client")
+                    history.push("/Client")
                 } else {
                     existDialog.current.showModal()
                 }
