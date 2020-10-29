@@ -92,11 +92,13 @@ export const HappinessResult = () => {
     const happinessResult = +sessionStorage.getItem("HappinessTest")
     return (
         <>
+            <Container style={{ marginTop: '7em' }}>
             <DisplayCorrectResult key='6' happinessResult={happinessResult}/>
 
             <Button>
                 <Link to="/WillingnessTest">Continue to Willingness Test</Link> 
             </Button>
+            </Container>
         </>
     )
 }

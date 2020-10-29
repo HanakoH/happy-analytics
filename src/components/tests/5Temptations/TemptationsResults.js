@@ -53,6 +53,7 @@ export const TemptationsResult = () => {
     const temptationsResult = +sessionStorage.getItem("TemptationsTest")
     return (
         <>
+            <Container style={{ marginTop: '7em' }}>
             <DisplayCorrectResult key='5' temptationsResult={temptationsResult}/><br></br>
             <Container>
                 <p>
@@ -63,6 +64,7 @@ export const TemptationsResult = () => {
             <Button>
                 <Link to="/HappinessTest">Continue to Happiness Test</Link> 
             </Button>
+            </Container>
         </>
     )
 }

@@ -58,7 +58,7 @@ export const TemptationsTest = props => {
                 <div>You must choose an option for each question.</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
         </dialog>
-
+        <Container style={{ marginTop: '7em' }}>
         <Form widths='equal' className="tests" onSubmit={saveTestResults}>
             <Header as='h2'>Temptations Test</Header>
             <Container textAlign='center'>
@@ -120,6 +120,7 @@ export const TemptationsTest = props => {
                 <Button type="submit"> Temptations Results </Button>
             </Form.Field>
         </Form>
+        </Container>
     </>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import {Container, Image, Menu } from 'semantic-ui-react'
-import mainLogo from "../images/no_text_200x200.png";
+import { NavLink, useHistory } from 'react-router-dom'
+import {Container, Image, Menu, Button } from 'semantic-ui-react'
+import mainLogo from "./images/no_text_200x200.png";
 
 
 export const ClientNavBar = () => {
@@ -9,6 +9,13 @@ export const ClientNavBar = () => {
 
     const handleItemClick = (e, { name }) => setActiveItem({ activeItem: name })
 
+    const history = useHistory()
+
+    const clearStorage = () => {
+        localStorage.clear()
+        history.push("/")
+    }
+   
         return (
             <div>
                 <Menu fixed='top' inverted>
@@ -39,6 +46,11 @@ export const ClientNavBar = () => {
                         onClick={handleItemClick}>
                             Analytics
                     </Menu.Item>
+                    <Menu.Menu position="right">
+                        <Button inverted onClick={clearStorage}>
+                            Log Out
+                        </Button>
+                    </Menu.Menu>
                 </Container>
                 </Menu>
             </div>
