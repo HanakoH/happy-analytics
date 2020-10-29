@@ -36,11 +36,6 @@
       "id": 3
     },
     {
-      "coachId": 2,
-      "clientId": 4,
-      "id": 4
-    },
-    {
       "coachId": 3,
       "clientId": 5,
       "id": 5
@@ -64,12 +59,6 @@
       "last_name": "Montgomery",
       "email": "brendanM20@mba.edu",
       "id": 3
-    },
-    {
-      "first_name": "Josephine",
-      "last_name": "Viotto",
-      "email": "justYourAverageJo@gmail.com",
-      "id": 4
     },
     {
       "email": "guccigucci@gmail.com",
@@ -174,6 +163,18 @@
       "happiness_test": 20,
       "willingness_test": 19,
       "id": 8
+    },
+    {
+      "clientId": 3,
+      "date": 1603998865470,
+      "depression_test": 12,
+      "anxiety_test": 16,
+      "anger_test": 0,
+      "satisfaction_test": 21,
+      "temptations_test": 0,
+      "happiness_test": 17,
+      "willingness_test": 16,
+      "id": 9
     }
   ]
 }

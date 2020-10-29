@@ -17,6 +17,11 @@ export const ClientProvider = (props) => {
             .then(setClients)
     }
 
+    const getClientById = clientId => {
+        return fetch(`http://localhost:8088/clients/${clientId}?_embed=testResults`)
+            .then(res => res.json())
+    }
+
     const deleteClient = clientId => {
         return fetch(`http://localhost:8088/clients/${clientId}`, {
             method: "DELETE"
@@ -26,7 +31,7 @@ export const ClientProvider = (props) => {
 
     return (
         <ClientContext.Provider value={{
-            clients, getClients, deleteClient
+            clients, getClients, getClientById, deleteClient
         }}>
             {props.children}
         </ClientContext.Provider>

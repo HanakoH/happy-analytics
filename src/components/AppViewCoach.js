@@ -3,8 +3,9 @@ import React from 'react'
 import { Route } from "react-router-dom";
 //Home
 import { CoachHome } from './coaches/CoachHome';
-import { ClientList } from './clients/ClientList'
+import { ClientList } from './clients/ClientList';
 import { ClientProvider } from './clients/ClientProvider';
+import { ClientDetail } from './coaches/ClientDetailForCoach'
 //ClientForm & Success Page
 import { ClientForm } from './coaches/ClientForm';
 import { SuccessfullyAdded } from './coaches/SuccessfullyAdded';
@@ -19,6 +20,12 @@ export const AppViewCoach = () => {
             </Route>
         </ClientProvider>
             
+        <ClientProvider>
+            <Route exact path="/Clients/:clientId(\d+)">
+                <ClientDetail />
+            </Route>
+        </ClientProvider>  
+
             <Route exact path="/AddClient">
                 <ClientForm />
             </Route>
