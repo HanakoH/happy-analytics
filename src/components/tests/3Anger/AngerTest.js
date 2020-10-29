@@ -58,7 +58,7 @@ export const AngerTest = props => {
                 <div>You must choose an option for each question.</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
         </dialog>
-
+        <Container style={{ marginTop: '7em' }}>
         <Form widths='equal' className="tests" onSubmit={saveTestResults}>
             <Header as='h2'>Anger in your Relationships Test</Header>
             <Container textAlign='center'>
@@ -115,6 +115,7 @@ export const AngerTest = props => {
                 <Button type="submit"> Anger Results </Button>
             </Form.Field>
         </Form>
+        </Container>
     </>
     )
 }

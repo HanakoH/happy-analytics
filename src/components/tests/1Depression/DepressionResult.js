@@ -55,10 +55,12 @@ export const DepressionResult = () => {
     const depressionResult = +sessionStorage.getItem("DepressionTest")
     return (
         <>
+            <Container style={{ marginTop: '7em' }}>
             <DisplayCorrectResult key='1' depressionResult={depressionResult}/>
             <Button>
                 <Link to="/AnxietyTest">Continue to Anxiety Test</Link> 
             </Button>
+            </Container>
         </>
     )
 }

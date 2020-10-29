@@ -9,7 +9,7 @@ import { WelcomeCoach } from "./WelcomeCoach";
 
 import "./HappyAnalytics.css"
 
-import { ClientNavBar } from "./clients/ClientNavBar";
+import { ClientNavBar } from "./ClientNavBar";
 import { AppViewClient } from "./AppViewClient";
 
 

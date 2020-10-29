@@ -60,6 +60,7 @@ export const DepressionTest = props => {
         
         <Container style={{ marginTop: '7em' }}>
         <Form widths='equal' className="tests" onSubmit={saveTestResults}>
+            <Header as="h1">If you fail to fill out all tests you will have to start over.</Header>
             <Header as='h2'>Depression Test</Header>
             <Container textAlign='center'>
                 Instructions: 

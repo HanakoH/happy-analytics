@@ -53,10 +53,12 @@ export const SatisfactionResult = () => {
     const satisfactionResult = +sessionStorage.getItem("SatisfactionTest")
     return (
         <>
+            <Container style={{ marginTop: '7em' }}>
             <DisplayCorrectResult key='4' satisfactionResult={satisfactionResult}/>
             <Button>
                 <Link to="/TemptationsTest">Continue to Temptations Test</Link> 
             </Button>
+            </Container>
         </>
     )
 }

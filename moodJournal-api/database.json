@@ -162,6 +162,18 @@
       "happiness_test": 20,
       "willingness_test": 20,
       "id": 7
+    },
+    {
+      "clientId": 3,
+      "date": 1603936209070,
+      "depression_test": 1,
+      "anxiety_test": 16,
+      "anger_test": 1,
+      "satisfaction_test": 28,
+      "temptations_test": 3,
+      "happiness_test": 20,
+      "willingness_test": 19,
+      "id": 8
     }
   ]
 }
