@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import {Container, Image, Menu } from 'semantic-ui-react'
 import mainLogo from "../images/no_text_200x200.png";
 
