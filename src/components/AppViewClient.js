@@ -3,6 +3,8 @@ import React from 'react'
 import { Route } from "react-router-dom";
 //Home
 import { ClientHome } from './clients/ClientHome';
+import { ClientDetailForClient } from './clients/ClientDetailForClient';
+import { ClientProvider } from './clients/ClientProvider';
 //Depression
 import { DepressionTest } from "./tests/1Depression/DepressionTest";
 import { DepressionResult } from "./tests/1Depression/DepressionResult";
@@ -28,9 +30,17 @@ import { WillingnessResult } from "./tests/7Willingness/WillingnessResults";
 export const AppViewClient = () => {
     return (
         <>
+        <ClientProvider>
             <Route exact path="/Client">
                 <ClientHome />
             </Route>
+        </ClientProvider>
+
+        <ClientProvider>
+            <Route exact path="/Clients/:clientId(\d+)">
+                <ClientDetailForClient />
+            </Route>
+        </ClientProvider>
 
             <Route exact path="/DepressionTest">
                 <DepressionTest />
