@@ -8,7 +8,6 @@ export const CoachHome = () => {
     <>
         <Container text style={{ marginTop: '7em' }} >
             <Header as="h2">Welcome to Happy Analytics, {activeCoach}</Header>
-            
         </Container>
     </>)
 }

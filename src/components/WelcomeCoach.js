@@ -42,22 +42,22 @@ export const WelcomeCoach = () => {
                         .then(obj => {
                             const firstClientId = obj.id
                             const currentCoach = localStorage.getItem("activeCoach")
-                            fetch("http://localhost:8088/client_coach", {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json"
-                            },
-                            body: JSON.stringify({
-                                coachId: +currentCoach,
-                                clientId: firstClientId
+                            return fetch("http://localhost:8088/client_coach", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify({
+                                    coachId: +currentCoach,
+                                    clientId: firstClientId
+                                })
+                            })
+                            .then(() => history.push("/Coach"))
                         })
-                    })})
-                        .then(history.push("/coach"))
                 } else {
                     conflictDialog.current.showModal()
                 }
             })
-        
     }
 
     return (
@@ -71,7 +71,7 @@ export const WelcomeCoach = () => {
                 <Image src={mainLogo} className="headLogo" />
                 Welcome {coachName}
             </Header>
-            <Form  widths='equal' className="form--login" onSubmit={handleRegister}>
+            <Form widths='equal' className="form--login" onSubmit={handleRegister}>
                 <Header as='h2' className="h2 mb-3 font-weight-normal">To add your first client add their first and last name and their email.</Header>
                 <Form.Field>
                     <label htmlFor="firstName"> First Name </label>

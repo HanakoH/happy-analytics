@@ -63,7 +63,7 @@ Form.Field {
 
 .form--login {
     background-position-x: right;
-    background-image: url(./images/no_text_200x200.png);
+    background-image: url(../images/no_text_200x200.png);
     z-index: 1;
     min-height: 25rem;
     min-width: 45rem;

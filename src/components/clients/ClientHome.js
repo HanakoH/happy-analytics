@@ -16,7 +16,7 @@ export const ClientHome = () => {
     return (
     <>
         <Container text style={{ marginTop: '7em' }} >
-            <Header as="h2">Welcome to Happy Analytics, {activeClient}</Header>
+            <Header as="h2">Hey {activeClient}, to see your past test results click your name below!</Header>
             <Card.Group>
                 {
                 clients.map(client => {

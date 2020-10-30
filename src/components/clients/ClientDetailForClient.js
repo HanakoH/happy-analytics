@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { ClientContext } from "../clients/ClientProvider"
-import { useParams, useHistory } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { Card, Container } from "semantic-ui-react"
 import { ClientDetailCard } from "../coaches/ClientDetailCard"
 
@@ -10,7 +10,7 @@ export const ClientDetailForClient = () => {
 	const [client, setClient] = useState({})
 	
 	const {clientId} = useParams();
-	const history = useHistory();
+	
 	 
     useEffect(() => {
 		getClientById(clientId)
