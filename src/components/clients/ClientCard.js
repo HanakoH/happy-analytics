@@ -10,7 +10,7 @@ export const ClientCard = ({ client }) => (
                 {client.first_name} {client.last_name}
             </Link>
         </Card.Header>
-        <Card.Meta>Client</Card.Meta>
+        <Card.Meta></Card.Meta>
         <Card.Description>
           Number of Mood Journals completed: {client.testResults.length}
         </Card.Description>

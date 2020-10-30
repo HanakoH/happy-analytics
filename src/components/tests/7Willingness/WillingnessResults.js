@@ -1,7 +1,7 @@
 //Calculates WillingnessResult
 import React from 'react'
 import { useHistory } from "react-router-dom"
-import { Container, Header, Button, Form } from 'semantic-ui-react'
+import { Container, Header, Button} from 'semantic-ui-react'
 
 const DisplayCorrectResult = ({willingnessResult}) => {
     if (willingnessResult === 0) {
@@ -132,7 +132,7 @@ export const WillingnessResult = () => {
             .then(history.push("/Client"))
         } else {
             alert("You have missing tests and must start back at the beginning")
-            history.push("/coach")
+            history.push("/DepressionTest")
         } 
     }
     const willingnessResult = +sessionStorage.getItem("WillingnessTest")

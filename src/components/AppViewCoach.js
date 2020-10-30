@@ -29,6 +29,7 @@ export const AppViewCoach = () => {
             <Route exact path="/AddClient">
                 <ClientForm />
             </Route>
+            
             <Route exact path="/SuccessfullyAdded">
                 <SuccessfullyAdded />
             </Route>

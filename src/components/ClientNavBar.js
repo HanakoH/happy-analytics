@@ -21,6 +21,8 @@ export const ClientNavBar = () => {
                 <Menu fixed='top' inverted>
                 <Container>
                     <Menu.Item 
+                        className="HappyAnalytics"
+                        style={{ fontSize: 24 }}
                         name="Home"
                         as={NavLink}
                         to="/Client" header
@@ -29,6 +31,7 @@ export const ClientNavBar = () => {
                             Happy Analytics
                     </Menu.Item>
                     <Menu.Item 
+                        style={{ fontSize: 16 }}
                         name="Mood Test"
                         as={NavLink}
                         to="/DepressionTest" 
@@ -38,6 +41,7 @@ export const ClientNavBar = () => {
                             Take Mood Test
                     </Menu.Item>
                     <Menu.Item 
+                        style={{ fontSize: 16 }}
                         name="Analytics"
                         as={NavLink}
                         to="/Analytics" 
@@ -55,5 +59,4 @@ export const ClientNavBar = () => {
                 </Menu>
             </div>
         )
-    
 }

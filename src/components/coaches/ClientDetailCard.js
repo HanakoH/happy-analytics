@@ -5,7 +5,7 @@ export const ClientDetailCard = ({testResults}) => (
     <>
         <Card.Content>
             <Card.Header>{new Date(testResults.date).toLocaleString("en-US")}</Card.Header>
-            <Card.Meta>Co-Worker</Card.Meta>
+            <Card.Meta></Card.Meta>
             <Card.Description>
                 Depression Test Score = {testResults.depression_test} <br/>
                 Anxiety Test Score = {testResults.anxiety_test} <br/>

@@ -3,7 +3,7 @@ import React from "react";
 import { Header, Image } from "semantic-ui-react"
 import { Link } from "react-router-dom"
 import "./SplashPage.css"
-import mainLogo from "./images/happy_analytics_200x200.png";
+import mainLogo from "../images/happy_analytics_200x200.png";
 
 export const SplashPage = () => {
 
