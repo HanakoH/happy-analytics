@@ -138,9 +138,9 @@ export const WillingnessResult = () => {
     const willingnessResult = +sessionStorage.getItem("WillingnessTest")
     return (
         <>
-            <Container style={{ marginTop: '7em' }}>
+            <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='7' willingnessResult={willingnessResult}/>
-            <Button type="submit" onClick={handleFinalizeJournal}>
+            <Button style={{ margin: "1em"}} type="submit" onClick={handleFinalizeJournal}>
                 Save your Mood Journal
             </Button>
             </Container>

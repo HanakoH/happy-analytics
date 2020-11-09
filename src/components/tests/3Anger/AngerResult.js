@@ -2,27 +2,28 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import { Container, Header, Button } from 'semantic-ui-react'
+import "../Tests.css"
 
 const DisplayCorrectResult = ({angerResult}) => {
     if (angerResult === 0 ) {
         return <Container>
-            <Header as="h2">Anger Scale</Header>
+            <Header as="h2">Anger Scale: No Anger</Header>
             <p>
-                Your score was {angerResult}! No anger.
+                Your score was {angerResult}!
             </p>
         </Container> 
     } else if (angerResult === 1 || angerResult === 2) {
         return <Container>
-            <Header as="h2">Anger Scale</Header>
+            <Header as="h2">Anger Scale: A Little Anger</Header>
             <p>
-                Your score was {angerResult}: A little anger.
+                Your score was {angerResult}.
             </p>
         </Container> 
     } else if (angerResult === 3 || angerResult === 4 || angerResult === 5) {
         return <Container>
-            <Header as="h2">Anger Scale</Header>
+            <Header as="h2">Anger Scale: Mild Anger</Header>
             <p>
-                Your score was {angerResult}: Mild anger.
+                Your score was {angerResult}.
             </p>
         </Container> 
     } else if (angerResult >= 6 && angerResult <= 10) {
@@ -34,16 +35,16 @@ const DisplayCorrectResult = ({angerResult}) => {
         </Container> 
     } else if (angerResult >= 11 && angerResult <= 15) {
         return <Container>
-            <Header as="h2">Anger Scale</Header>
+            <Header as="h2">Anger Scale: Severe Anger</Header>
             <p>
-                Your score was {angerResult}: Severe anger.
+                Your score was {angerResult}.
             </p>
         </Container> 
     } else {
         return <Container>
-            <Header as="h2">Anger Scale</Header>
+            <Header as="h2">Anger Scale: Extreme Anger</Header>
             <p>
-                Your score was {angerResult}: Extreme anger.
+                Your score was {angerResult}.
             </p>
         </Container> 
     }
@@ -52,13 +53,13 @@ const DisplayCorrectResult = ({angerResult}) => {
 export const AngerResult = () => {
     const angerResult = +sessionStorage.getItem("AngerTest")
     return (
-        <>
-            <Container style={{ marginTop: '7em' }}>
+        <main>
+            <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='3' angerResult={angerResult}/>
-            <Button>
+            <Button style={{ margin: "1em"}}>
                 <Link to="/SatisfactionTest">Continue to Relationship Satisfaction Test</Link> 
             </Button>
             </Container>
-        </>
+        </main>
     )
 }

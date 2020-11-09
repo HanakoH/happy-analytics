@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from "semantic-ui-react"
 
 export const ClientDetailCard = ({testResults}) => (
-    <>
+    <Card>
         <Card.Content>
             <Card.Header>{new Date(testResults.date).toLocaleString("en-US")}</Card.Header>
             <Card.Meta></Card.Meta>
@@ -16,5 +16,5 @@ export const ClientDetailCard = ({testResults}) => (
                 Willingness Score = {testResults.willingness_test}
             </Card.Description>
         </Card.Content>
-    </>
+    </Card>
 )

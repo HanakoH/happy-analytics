@@ -15,7 +15,7 @@ export const AppViewCoach = () => {
         <>
         <ClientProvider>
             <Route exact path="/Coach">
-                <CoachHome />
+                {/* <CoachHome /> */}
                 <ClientList />
             </Route>
         </ClientProvider>

@@ -12,13 +12,13 @@ export const ClientNavBar = () => {
     const history = useHistory()
 
     const clearStorage = () => {
-        localStorage.clear()
+        sessionStorage.clear()
         history.push("/")
     }
    
         return (
             <div>
-                <Menu fixed='top' inverted>
+                <Menu inverted>
                 <Container>
                     <Menu.Item 
                         className="HappyAnalytics"

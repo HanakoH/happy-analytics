@@ -1,1 +1,0 @@
-//Lists the Journal Entries to DOM (to then be put in AppView)

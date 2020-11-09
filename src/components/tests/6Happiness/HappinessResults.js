@@ -92,10 +92,10 @@ export const HappinessResult = () => {
     const happinessResult = +sessionStorage.getItem("HappinessTest")
     return (
         <>
-            <Container style={{ marginTop: '7em' }}>
+            <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='6' happinessResult={happinessResult}/>
 
-            <Button>
+            <Button style={{ margin: "1em"}}>
                 <Link to="/WillingnessTest">Continue to Willingness Test</Link> 
             </Button>
             </Container>

@@ -21,18 +21,17 @@ export const ClientDetailForClient = () => {
 
 
     return (
-        <Container style={{ marginTop: '7em' }}>
-        <section className="client">
-            <h3 className="client__name">{client.first_name} {client.last_name}</h3>
-			<Card className="client__journals">
+        <Container style={{ marginTop: '3em' }}>
+			<section className="client">
+			<h3 className="client__name">{client.first_name} {client.last_name}</h3>
+			<Card.Group className="client__journals">
 				{
 					client.testResults?.map(testResults => {
 						return <ClientDetailCard key={testResults.id} testResults={testResults}  />
 					})
 				}
-			</Card>
-            
-        </section>
+			</Card.Group>
+			</section>
         </Container>
     )
 }

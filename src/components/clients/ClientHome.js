@@ -7,7 +7,7 @@ import { Card } from 'semantic-ui-react'
 export const ClientHome = () => {
     const { clients, getClients } = useContext(ClientContext)
 
-    const activeClient = localStorage.getItem("clientName")
+    const activeClient = sessionStorage.getItem("clientName")
 
     useEffect(() => {
         getClients()
@@ -15,7 +15,7 @@ export const ClientHome = () => {
 
     return (
     <>
-        <Container text style={{ marginTop: '7em' }} >
+        <Container text style={{ marginTop: '3em' }} >
             <Header as="h2">Hey {activeClient}, to see your past test results click your name below!</Header>
             <Card.Group>
                 {

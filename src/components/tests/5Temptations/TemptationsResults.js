@@ -53,15 +53,15 @@ export const TemptationsResult = () => {
     const temptationsResult = +sessionStorage.getItem("TemptationsTest")
     return (
         <>
-            <Container style={{ marginTop: '7em' }}>
+            <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='5' temptationsResult={temptationsResult}/><br></br>
-            <Container>
+            <Container style={{ margin: "1em"}}>
                 <p>
                     There are just a couple more tests for you to take. So far, we've been talking about negatives--gloomy moods, trouble relationships, and bad habits.
                      How about the other side of the coin? Let's find out how happy you are.
                 </p>
             </Container>
-            <Button>
+            <Button style={{ margin: "1em"}}>
                 <Link to="/HappinessTest">Continue to Happiness Test</Link> 
             </Button>
             </Container>
