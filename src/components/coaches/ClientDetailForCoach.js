@@ -23,14 +23,14 @@ export const ClientDetailForCoach = () => {
     return (
 		<Container className="client">
 				<h3 className="client__name">{client.first_name} {client.last_name}</h3>
-				<Card textAlign="center" className="client__journals">
+				<Card.Group textAlign="center" className="client__journals">
 					{
 						client.testResults?.map(testResults => {
 							return <ClientDetailCard key={testResults.id} testResults={testResults}  />
 						})
 					}
-				</Card>
-				<Button onClick={
+				</Card.Group>
+				<Button style={{ margin: '1em' }} onClick={
 					() => {
 						deleteClient(client.id)
 							.then(() => {
