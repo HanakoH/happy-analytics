@@ -6,7 +6,7 @@ import format from 'date-fns/format'
 import Chart from "chart.js"
 
 export const AnalyticsList = () => {
-    const { singleClient, getClientById } = useContext(ClientContext)
+    const { singleClient, getClientByIdForAnalytics } = useContext(ClientContext)
     const [ happinessData, setHappinessData ] = useState(null)
     const [ happinessDateData, setHappinessDateData ] = useState()
 
@@ -15,7 +15,7 @@ export const AnalyticsList = () => {
     const clientName = sessionStorage.getItem("clientName")
 
     useEffect(() => {
-        getClientById(client)
+        getClientByIdForAnalytics(client)
       }, [])
     
       useEffect(() => {

@@ -1,7 +1,7 @@
 //Calculates TemptationsResult 
 import React from 'react'
 import { Link } from "react-router-dom"
-import { Container, Header, Button } from 'semantic-ui-react'
+import { Container, Header, Button, Progress } from 'semantic-ui-react'
 import "../Tests.css"
 
 const DisplayCorrectResult = ({temptationsResult}) => {
@@ -53,6 +53,8 @@ const DisplayCorrectResult = ({temptationsResult}) => {
 export const TemptationsResult = () => {
     const temptationsResult = +sessionStorage.getItem("TemptationsTest")
     return (
+        <>
+        <Progress value='5' total='7' progress='ratio' color='teal'/>
         <main>
             <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='5' temptationsResult={temptationsResult}/><br></br>
@@ -67,5 +69,6 @@ export const TemptationsResult = () => {
             </Button>
             </Container>
         </main>
+        </>
     )
 }

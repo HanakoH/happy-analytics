@@ -1,7 +1,7 @@
 //Calculates AngerResult 
 import React from 'react'
 import { Link } from "react-router-dom"
-import { Container, Header, Button } from 'semantic-ui-react'
+import { Container, Header, Button, Progress } from 'semantic-ui-react'
 import "../Tests.css"
 
 const DisplayCorrectResult = ({angerResult}) => {
@@ -53,6 +53,8 @@ const DisplayCorrectResult = ({angerResult}) => {
 export const AngerResult = () => {
     const angerResult = +sessionStorage.getItem("AngerTest")
     return (
+    <>    
+        <Progress value='3' total='7' progress='ratio' color='teal'/>
         <main>
             <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='3' angerResult={angerResult}/>
@@ -61,5 +63,6 @@ export const AngerResult = () => {
             </Button>
             </Container>
         </main>
+    </>    
     )
 }

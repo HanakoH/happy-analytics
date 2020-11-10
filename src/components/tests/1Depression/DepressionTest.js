@@ -1,7 +1,7 @@
 //Hosts all choices of questions and potential answers for the Depression Test and sends the answers to be stored in Session Storage
 import React, { useState, useRef } from 'react'
 import { useHistory } from "react-router-dom"
-import { Form, Header, Select, Container, Button } from 'semantic-ui-react'
+import { Form, Header, Select, Container, Button, Progress } from 'semantic-ui-react'
 import "../Tests.css"
 
 const depressionChoices = [
@@ -58,6 +58,7 @@ export const DepressionTest = props => {
                 <div>You must choose an option for each question.</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
         </dialog>
+        <Progress value='0' total='7' progress='ratio' color='teal'/>
         <main>
         <Container>
             <Header as="h1">If you fail to fill out all tests you will have to start over.</Header>

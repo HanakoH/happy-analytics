@@ -1,7 +1,7 @@
 //Calculates SatisfactionResult
 import React from 'react'
 import { Link } from "react-router-dom"
-import { Container, Header, Button } from 'semantic-ui-react'
+import { Container, Header, Button, Progress } from 'semantic-ui-react'
 import "../Tests.css"
 
 const DisplayCorrectResult = ({satisfactionResult}) => {
@@ -53,6 +53,8 @@ const DisplayCorrectResult = ({satisfactionResult}) => {
 export const SatisfactionResult = () => {
     const satisfactionResult = +sessionStorage.getItem("SatisfactionTest")
     return (
+        <>
+        <Progress value='4' total='7' progress='ratio' color='teal'/>
         <main>
             <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='4' satisfactionResult={satisfactionResult}/>
@@ -61,5 +63,6 @@ export const SatisfactionResult = () => {
             </Button>
             </Container>
         </main>
+        </>
     )
 }

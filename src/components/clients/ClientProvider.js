@@ -21,6 +21,11 @@ export const ClientProvider = (props) => {
     const getClientById = clientId => {
         return fetch(`http://localhost:8088/clients/${clientId}?_embed=testResults`)
             .then(res => res.json())
+    }
+
+    const getClientByIdForAnalytics = clientId => {
+        return fetch(`http://localhost:8088/clients/${clientId}?_embed=testResults`)
+            .then(res => res.json())
             .then(setSingleClient)
     }
 
@@ -33,7 +38,7 @@ export const ClientProvider = (props) => {
 
     return (
         <ClientContext.Provider value={{
-            clients, getClients, getClientById, singleClient, deleteClient
+            clients, getClients, getClientById, getClientByIdForAnalytics, singleClient, deleteClient
         }}>
             {props.children}
         </ClientContext.Provider>

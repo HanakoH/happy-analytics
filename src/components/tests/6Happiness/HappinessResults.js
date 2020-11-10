@@ -1,7 +1,7 @@
 //Calculates HappinessResult
 import React from 'react'
 import { Link } from "react-router-dom"
-import { Container, Header, Button } from 'semantic-ui-react'
+import { Container, Header, Button, Progress } from 'semantic-ui-react'
 import "../Tests.css"
 
 const DisplayCorrectResult = ({happinessResult}) => {
@@ -92,6 +92,8 @@ const DisplayCorrectResult = ({happinessResult}) => {
 export const HappinessResult = () => {
     const happinessResult = +sessionStorage.getItem("HappinessTest")
     return (
+        <>
+        <Progress value='6' total='7' progress='ratio' color='teal'/>
         <main>
             <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='6' happinessResult={happinessResult}/>
@@ -101,5 +103,6 @@ export const HappinessResult = () => {
             </Button>
             </Container>
         </main>
+        </>
     )
 }
