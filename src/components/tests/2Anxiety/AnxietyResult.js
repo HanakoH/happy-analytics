@@ -1,7 +1,7 @@
 //Calculates AnxietyResult
 import React from 'react'
 import { Link } from "react-router-dom"
-import { Container, Header, Button } from 'semantic-ui-react'
+import { Container, Header, Button, Progress } from 'semantic-ui-react'
 import "../Tests.css"
 
 const DisplayCorrectResult = ({anxietyResult}) => {
@@ -55,6 +55,8 @@ const DisplayCorrectResult = ({anxietyResult}) => {
 export const AnxietyResult = () => {
     const anxietyResult = +sessionStorage.getItem("AnxietyTest")
     return (
+    <>    
+        <Progress value='2' total='7' progress='ratio' color='teal'/>
         <main>
             <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center" }}>
             <DisplayCorrectResult key='2' anxietyResult={anxietyResult}/>
@@ -63,5 +65,6 @@ export const AnxietyResult = () => {
             </Button>
             </Container>
         </main>
+    </>    
     )
 }

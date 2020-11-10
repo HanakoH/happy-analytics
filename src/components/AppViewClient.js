@@ -5,6 +5,8 @@ import { Route } from "react-router-dom";
 import { ClientHome } from './clients/ClientHome';
 import { ClientDetailForClient } from './clients/ClientDetailForClient';
 import { ClientProvider } from './clients/ClientProvider';
+//Analytics
+import { AnalyticsList } from './analytics/AnalyticsList';
 //Depression
 import { DepressionTest } from "./tests/1Depression/DepressionTest";
 import { DepressionResult } from "./tests/1Depression/DepressionResult";
@@ -39,6 +41,12 @@ export const AppViewClient = () => {
         <ClientProvider>
             <Route exact path="/Clients/:clientId(\d+)">
                 <ClientDetailForClient />
+            </Route>
+        </ClientProvider>
+
+        <ClientProvider>
+            <Route exact path='/Analytics'>
+                <AnalyticsList />
             </Route>
         </ClientProvider>
 

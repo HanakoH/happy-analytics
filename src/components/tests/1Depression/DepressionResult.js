@@ -1,7 +1,7 @@
 //Calculates DepressionResults 
 import React from 'react'
 import { Link } from "react-router-dom"
-import { Container, Header, Button } from 'semantic-ui-react'
+import { Container, Header, Button, Progress } from 'semantic-ui-react'
 import "../Tests.css"
 
 const DisplayCorrectResult = ({depressionResult}) => {
@@ -55,6 +55,8 @@ const DisplayCorrectResult = ({depressionResult}) => {
 export const DepressionResult = () => {
     const depressionResult = +sessionStorage.getItem("DepressionTest")
     return (
+    <> 
+        <Progress value='1' total='7' progress='ratio' color='teal'/>
         <main>
             <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='1' depressionResult={depressionResult}/>
@@ -63,5 +65,6 @@ export const DepressionResult = () => {
             </Button>
             </Container>
         </main>
+    </>
     )
 }

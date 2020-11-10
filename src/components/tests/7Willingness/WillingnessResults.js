@@ -1,7 +1,7 @@
 //Calculates WillingnessResult
 import React from 'react'
 import { useHistory } from "react-router-dom"
-import { Container, Header, Button} from 'semantic-ui-react'
+import { Container, Header, Button, Progress } from 'semantic-ui-react'
 import "../Tests.css"
 
 const DisplayCorrectResult = ({willingnessResult}) => {
@@ -138,6 +138,8 @@ export const WillingnessResult = () => {
     }
     const willingnessResult = +sessionStorage.getItem("WillingnessTest")
     return (
+        <>
+        <Progress value='7' total='7' progress='ratio' color='teal'/>
         <main>
             <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='7' willingnessResult={willingnessResult}/>
@@ -146,5 +148,6 @@ export const WillingnessResult = () => {
             </Button>
             </Container>
         </main>
+        </>
     )
 }
