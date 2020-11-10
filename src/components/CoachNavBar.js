@@ -12,7 +12,7 @@ export const CoachNavBar = () => {
     const history = useHistory()
 
     const clearStorage = () => {
-        localStorage.clear()
+        sessionStorage.clear()
         history.push("/")
     }
    
@@ -40,7 +40,7 @@ export const CoachNavBar = () => {
                         onClick={handleItemClick}>
                             Add New Client
                     </Menu.Item>
-                    <Menu.Item 
+                    {/* <Menu.Item 
                         style={{ fontSize: 16 }}
                         name="Analytics"
                         as={NavLink}
@@ -49,7 +49,7 @@ export const CoachNavBar = () => {
                         active={activeItem === 'Analytics'} 
                         onClick={handleItemClick}>
                             Analytics
-                    </Menu.Item>
+                    </Menu.Item> */}
                     <Menu.Item position="right"
                         onClick={clearStorage}>
                             Log Out

@@ -2,6 +2,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import { Container, Header, Button } from 'semantic-ui-react'
+import "../Tests.css"
 
 const DisplayCorrectResult = ({depressionResult}) => {
     if (depressionResult === 0 ) {
@@ -54,13 +55,13 @@ const DisplayCorrectResult = ({depressionResult}) => {
 export const DepressionResult = () => {
     const depressionResult = +sessionStorage.getItem("DepressionTest")
     return (
-        <>
-            <Container style={{ marginTop: '7em' }}>
+        <main>
+            <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='1' depressionResult={depressionResult}/>
-            <Button>
+            <Button style={{ margin: "1em"}}>
                 <Link to="/AnxietyTest">Continue to Anxiety Test</Link> 
             </Button>
             </Container>
-        </>
+        </main>
     )
 }

@@ -2,6 +2,7 @@
 import React from 'react'
 import { useHistory } from "react-router-dom"
 import { Container, Header, Button} from 'semantic-ui-react'
+import "../Tests.css"
 
 const DisplayCorrectResult = ({willingnessResult}) => {
     if (willingnessResult === 0) {
@@ -90,7 +91,7 @@ const SaveMoodJournalData = (MoodJournalEntry) => {
 const MoodJournalCreator = () => {
     let moodJournal = {}
 
-    const clientId = +localStorage.getItem("activeClient")
+    const clientId = +sessionStorage.getItem("activeClient")
     const depressionTest = +sessionStorage.getItem("DepressionTest")
     const anxietyTest = +sessionStorage.getItem("AnxietyTest")
     const angerTest = +sessionStorage.getItem("AngerTest")
@@ -137,13 +138,13 @@ export const WillingnessResult = () => {
     }
     const willingnessResult = +sessionStorage.getItem("WillingnessTest")
     return (
-        <>
-            <Container style={{ marginTop: '7em' }}>
+        <main>
+            <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='7' willingnessResult={willingnessResult}/>
-            <Button type="submit" onClick={handleFinalizeJournal}>
+            <Button style={{ margin: "1em"}} type="submit" onClick={handleFinalizeJournal}>
                 Save your Mood Journal
             </Button>
             </Container>
-        </>
+        </main>
     )
 }

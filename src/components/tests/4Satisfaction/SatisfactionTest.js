@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react'
 import { useHistory } from "react-router-dom"
 import { Form, Header, Select, Container, Button } from 'semantic-ui-react'
+import "../Tests.css"
 
 const SatisfactionChoices = [
     { key: '0', text: '0 - Very dissatisfied', value: 0 },
@@ -60,14 +61,15 @@ export const SatisfactionTest = props => {
                 <div>You must choose an option for each question.</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
         </dialog>
-        <Container style={{ marginTop: '7em' }}>
-        <Form widths='equal' className="tests" onSubmit={saveTestResults}>
+        <main>
+        <Container>
             <Header as='h2'>Satisfaction in your Relationships Test</Header>
-            <Container textAlign='center'>
-                Instructions: 
+            <Container textAlign='center' style={{ margin: '1em' }}>
+                <p>Instructions: 
                 Think about an important relationship, like your spouse, partner, friend, colleague, or family member.
-                Answer all items.
+                <b> Answer all items.</b></p>
             </Container>
+        <Form widths='equal' className="tests" onSubmit={saveTestResults}>
             <Form.Field
                 onChange={handleDropdownOne}
                 required
@@ -118,6 +120,7 @@ export const SatisfactionTest = props => {
             </Form.Field>
         </Form>
         </Container>
+        </main>
     </>
     )
 }

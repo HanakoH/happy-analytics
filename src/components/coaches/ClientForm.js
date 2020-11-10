@@ -39,7 +39,7 @@ export const ClientForm = () => {
                         .then(_ => _.json())
                         .then(obj => {
                             const clientId = obj.id
-                            const currentCoach = localStorage.getItem("activeCoach")
+                            const currentCoach = sessionStorage.getItem("activeCoach")
                             fetch("http://localhost:8088/client_coach", {
                                 method: "POST",
                                 headers: {

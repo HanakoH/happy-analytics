@@ -19,8 +19,8 @@ export const CoachLogin = props => {
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    localStorage.setItem("activeCoach", exists.id)
-                    localStorage.setItem("coachName", exists.first_name)
+                    sessionStorage.setItem("activeCoach", exists.id)
+                    sessionStorage.setItem("coachName", exists.first_name)
                     history.push("/Coach")
                 } else {
                     existDialog.current.showModal()

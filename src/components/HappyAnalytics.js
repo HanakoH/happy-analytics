@@ -20,14 +20,14 @@ export const HappyAnalytics = () => (
   <>
     <Route
       render={() => {
-        if (localStorage.getItem("activeCoach")) {
+        if (sessionStorage.getItem("activeCoach")) {
           return (
             <>
                 <CoachNavBar />
                 <AppViewCoach />
             </>
           );
-        } else if (localStorage.getItem("activeClient")) {
+        } else if (sessionStorage.getItem("activeClient")) {
           return (
             <>
                 <ClientNavBar />

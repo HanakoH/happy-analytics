@@ -41,7 +41,7 @@ export const WelcomeCoach = () => {
                         .then(_ => _.json())
                         .then(obj => {
                             const firstClientId = obj.id
-                            const currentCoach = localStorage.getItem("activeCoach")
+                            const currentCoach = sessionStorage.getItem("activeCoach")
                             return fetch("http://localhost:8088/client_coach", {
                                 method: "POST",
                                 headers: {
