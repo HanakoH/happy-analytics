@@ -10,6 +10,7 @@ export const ClientContext = createContext()
 export const ClientProvider = (props) => {
 
     const [clients, setClients] = useState([])
+    const [singleClient, setSingleClient] = useState([])
 
     const getClients = () => {
         return fetch("http://localhost:8088/clients?_embed=client_coach&_embed=testResults")
@@ -20,6 +21,7 @@ export const ClientProvider = (props) => {
     const getClientById = clientId => {
         return fetch(`http://localhost:8088/clients/${clientId}?_embed=testResults`)
             .then(res => res.json())
+            .then(setSingleClient)
     }
 
     const deleteClient = clientId => {
@@ -31,7 +33,7 @@ export const ClientProvider = (props) => {
 
     return (
         <ClientContext.Provider value={{
-            clients, getClients, getClientById, deleteClient
+            clients, getClients, getClientById, singleClient, deleteClient
         }}>
             {props.children}
         </ClientContext.Provider>
