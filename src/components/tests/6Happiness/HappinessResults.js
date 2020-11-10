@@ -2,6 +2,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import { Container, Header, Button } from 'semantic-ui-react'
+import "../Tests.css"
 
 const DisplayCorrectResult = ({happinessResult}) => {
     if (happinessResult === 0 || happinessResult === 1) {
@@ -55,7 +56,7 @@ const DisplayCorrectResult = ({happinessResult}) => {
         </Container> 
     } else if (happinessResult >= 11 && happinessResult <= 15) {
         return <Container>
-            <Header as="h2">Happiness Result: A lot of Happiness</Header>
+            <Header as="h2">Happiness Result: A Lot of Happiness</Header>
             <p>
                 Your Score is {happinessResult}. You seem to be feeling very positive and happy, but there's room for feeling even happier.
             </p>
@@ -91,7 +92,7 @@ const DisplayCorrectResult = ({happinessResult}) => {
 export const HappinessResult = () => {
     const happinessResult = +sessionStorage.getItem("HappinessTest")
     return (
-        <>
+        <main>
             <Container className="resultsPage" style={{ marginTop: '3em' , textAlign: "center"}}>
             <DisplayCorrectResult key='6' happinessResult={happinessResult}/>
 
@@ -99,6 +100,6 @@ export const HappinessResult = () => {
                 <Link to="/WillingnessTest">Continue to Willingness Test</Link> 
             </Button>
             </Container>
-        </>
+        </main>
     )
 }

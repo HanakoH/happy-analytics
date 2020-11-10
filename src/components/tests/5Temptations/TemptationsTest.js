@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react'
 import { useHistory } from "react-router-dom"
 import { Form, Header, Select, Container, Button } from 'semantic-ui-react'
+import "../Tests.css"
 
 const TemptationsChoices = [
     { key: '0', text: '0 - Not at all', value: 0 },
@@ -58,14 +59,15 @@ export const TemptationsTest = props => {
                 <div>You must choose an option for each question.</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
         </dialog>
-        <Container style={{ marginTop: '7em' }}>
-        <Form widths='equal' className="tests" onSubmit={saveTestResults}>
-            <Header as='h2'>Temptations Test</Header>
-            <Container textAlign='center'>
-                Instructions: 
+        <main>
+        <Container>
+        <Header as='h2'>Temptations Test</Header>
+            <Container textAlign='center' style={{ margin: '1em' }}>
+                <p>Instructions: 
                 Select one choice per question to indicate how much each statement describes how you have been feeling in the past week, including today.
-                Answer all items.
+                <b> Answer all items.</b></p>
             </Container>
+        <Form widths='equal' className="tests" onSubmit={saveTestResults}>
             <Form.Field
                 onChange={handleDropdownOne}
                 required
@@ -111,16 +113,17 @@ export const TemptationsTest = props => {
                 options={TemptationsChoices}
                 placeholder='How have you felt in the past week?'
             />
-            <Container>
-                <p>
-                    You are so close to finishing your full journal! Don't be tempted to stop now, you can do it!
-                </p>
-            </Container>
             <Form.Field>
                 <Button type="submit"> Temptations Results </Button>
             </Form.Field>
         </Form>
+        <Container>
+            <p>
+                You are so close to finishing your full journal! Don't be tempted to stop now, you can do it!
+            </p>
         </Container>
+        </Container>
+        </main>
     </>
     )
 }
